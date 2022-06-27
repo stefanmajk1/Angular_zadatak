@@ -1,0 +1,22 @@
+<div id="app"></div>
+<script>
+  document.write('<base href="' + document.location + '" />');
+</script>
+<script src="https://unpkg.com/core-js-bundle@3.6.5/minified.js"></script>
+<script src="https://unpkg.com/zone.js@0.11.2/dist/zone.min.js"></script>
+<script>
+  var appLocation = "./";
+  var boilerplatePath = "";
+  var systemJsMap = {
+    "ag-charts-angular": "https://unpkg.com/ag-charts-angular@5.3.0/",
+    "ag-charts-community":
+      "https://unpkg.com/ag-charts-community@5.3.0/dist/ag-charts-community.cjs.min.js",
+  };
+</script>
+<script src="https://unpkg.com/systemjs@0.19.47/dist/system.js"></script>
+<script src="systemjs.config.js"></script>
+<script>
+  System.import("main.ts").catch(function (err) {
+    console.error(err);
+  });
+</script>
